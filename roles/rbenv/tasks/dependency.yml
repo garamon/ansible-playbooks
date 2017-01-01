@@ -1,0 +1,18 @@
+---
+- name: yum install
+  yum:
+    name: '{{ item.name }}'
+    state: '{{ item.state }}'
+  with_items:
+    - name: git
+      state: installed
+    - name: gcc-c++
+      state: installed
+    - name: openssl-devel
+      state: installed
+    - name: readline-devel
+      state: installed
+    - name: zlib-devel
+      state: installed
+    - name: mysql-devel
+      state: installed
