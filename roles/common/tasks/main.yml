@@ -1,0 +1,3 @@
+---
+- include: yum-update.yml
+- include: localtime.yml

@@ -1,0 +1,6 @@
+---
+- name: change localtime
+  shell: '{{ item.cmd }}'
+  with_items:
+    - cmd: ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+    - cmd: sed -i -e 's/ZONE=.*$/ZONE="Asia\/Tokyo"/' /etc/sysconfig/clock
