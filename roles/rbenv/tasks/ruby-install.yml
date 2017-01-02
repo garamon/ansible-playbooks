@@ -36,5 +36,6 @@
     with_items:
       - cmd: source ~/.bash_profile; rbenv install '{{ ruby_version }}'
       - cmd: source ~/.bash_profile; rbenv global '{{ ruby_version }}'
+      - cmd: source ~/.bash_profile; gem install bundler
     when: ruby_installed.rc == 1
 
