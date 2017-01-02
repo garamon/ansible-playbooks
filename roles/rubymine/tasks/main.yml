@@ -1,0 +1,6 @@
+---
+- name: install rubymine debugger
+  shell: '{{ item.cmd }}'
+  with_items:
+    - cmd: source ~/.bash_profile; gem install ruby-debug-ide
+    - cmd: source ~/.bash_profile; gem install debase
